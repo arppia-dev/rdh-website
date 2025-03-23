@@ -1,10 +1,11 @@
 import config from '@/payload.config'
-import { GraduationCap, Handshake, Lightbulb, LineChart, Search } from 'lucide-react'
 import { headers as getHeaders } from 'next/headers.js'
 import { getPayload } from 'payload'
 import { fileURLToPath } from 'url'
 import HeaderContact from './components/header/HeaderContact'
+import Hero from './components/home/Hero'
 import './globals.css'
+import AboutUs from './components/blocks/AboutUs'
 
 export default async function HomePage() {
   const headers = await getHeaders()
@@ -17,6 +18,8 @@ export default async function HomePage() {
   return (
     <>
       <HeaderContact />
+      <Hero />
+      <AboutUs />
     </>
   )
 }
