@@ -2,11 +2,13 @@ import config from '@/payload.config'
 import { headers as getHeaders } from 'next/headers.js'
 import { getPayload } from 'payload'
 import { fileURLToPath } from 'url'
+import AboutUs from './components/blocks/AboutUs'
+import CaseStudies from './components/blocks/CaseStudies'
+import Methodology from './components/blocks/Methodology'
+import Solutions from './components/blocks/Solutions'
 import HeaderContact from './components/header/HeaderContact'
 import Hero from './components/home/Hero'
 import './globals.css'
-import AboutUs from './components/blocks/AboutUs'
-import Solutions from './components/blocks/Solutions'
 
 export default async function HomePage() {
   const headers = await getHeaders()
@@ -22,6 +24,8 @@ export default async function HomePage() {
       <Hero />
       <AboutUs />
       <Solutions />
+      <Methodology />
+      <CaseStudies />
     </>
   )
 }

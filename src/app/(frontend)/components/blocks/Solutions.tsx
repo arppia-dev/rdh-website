@@ -81,7 +81,8 @@ export default function Solutions() {
                 href="#"
                 className="flex items-center gap-2 font-semibold text-sky-800 group-hover:text-white hover:underline"
               >
-                Más información →
+                Más información
+                <ArrowRight size={24} />
               </a>
             </div>
           ))}

@@ -33,7 +33,7 @@ export default function AboutUs() {
 
         {/* Right Section */}
         <div>
-          <h6 className="flex items-center gap-2 text-sm font-semibold tracking-wider text-gray-400 uppercase">
+          <h6 className="flex items-center gap-2 text-sm font-semibold tracking-wider text-sky-800 uppercase">
             Sobre Nosotros
             <span className="h-0.5 w-12 bg-amber-200"></span>
           </h6>
