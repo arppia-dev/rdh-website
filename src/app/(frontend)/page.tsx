@@ -6,6 +6,7 @@ import HeaderContact from './components/header/HeaderContact'
 import Hero from './components/home/Hero'
 import './globals.css'
 import AboutUs from './components/blocks/AboutUs'
+import Solutions from './components/blocks/Solutions'
 
 export default async function HomePage() {
   const headers = await getHeaders()
@@ -20,6 +21,7 @@ export default async function HomePage() {
       <HeaderContact />
       <Hero />
       <AboutUs />
+      <Solutions />
     </>
   )
 }

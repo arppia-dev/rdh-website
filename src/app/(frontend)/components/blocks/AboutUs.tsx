@@ -23,9 +23,11 @@ export default function AboutUs() {
           {/* Stats Card */}
           <div className="absolute bottom-[-40px] left-20 border-b-4 border-amber-200 bg-sky-950 p-10 text-white shadow-lg">
             <p className="text-5xl font-bold">
-              680<span className="text-xl">+</span>
+              100<span className="text-xl">+</span>
             </p>
-            <p className="mt-4 text-sm tracking-wide uppercase">Business Trust Us</p>
+            <p className="mt-4 text-sm tracking-wide uppercase">
+              negocios confian <br /> en nosotros
+            </p>
           </div>
         </div>
 
@@ -33,7 +35,7 @@ export default function AboutUs() {
         <div>
           <h6 className="flex items-center gap-2 text-sm font-semibold tracking-wider text-gray-400 uppercase">
             Sobre Nosotros
-            <span className="h-0.5 w-12 bg-orange-500"></span>
+            <span className="h-0.5 w-12 bg-amber-200"></span>
           </h6>
           <h2 className="mt-3 text-4xl leading-snug font-bold text-gray-900">
             We Are Business Consultants Dedicated To Driving Your Success
@@ -64,7 +66,7 @@ export default function AboutUs() {
 
           {/* Button */}
           <div className="mt-8">
-            <button className="flex items-center gap-2 bg-amber-200 px-6 py-3 font-semibold text-sky-950 hover:bg-amber-300">
+            <button className="flex items-center gap-2 bg-amber-200 px-6 py-3 font-semibold text-sky-950 hover:bg-sky-950 hover:text-white">
               Leer Más
               <ArrowRight size={24} />
             </button>

@@ -13,7 +13,7 @@ export default function HeaderMain() {
         <Navbar />
 
         {/* Get a Quote Button */}
-        <button className="z-10 bg-sky-800 px-6 py-4 font-semibold text-amber-50 hover:bg-sky-900 hover:text-amber-100">
+        <button className="z-10 bg-sky-800 px-6 py-4 font-semibold text-white hover:bg-amber-200 hover:text-sky-950">
           Obten una cita
         </button>
       </div>

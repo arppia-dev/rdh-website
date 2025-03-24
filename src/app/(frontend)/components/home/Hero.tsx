@@ -35,8 +35,8 @@ export default function Hero() {
 
         {/* Botón y teléfono */}
         <div className="mt-8 flex items-center gap-6">
-          <button className="flex items-center gap-2 bg-amber-200 px-6 py-3 font-semibold text-sky-950 hover:bg-amber-300">
-            Learn More
+          <button className="flex items-center gap-2 bg-amber-200 px-6 py-3 font-semibold text-sky-950 hover:bg-sky-950 hover:text-white">
+            Más información
             <ArrowRight size={24} />
           </button>
           <div className="flex items-center gap-2 text-white">
