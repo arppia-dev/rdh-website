@@ -1,4 +1,5 @@
 import { ArrowRight, CalendarDays } from 'lucide-react'
+import Image from 'next/image'
 
 export default function AboutUs() {
   return (
@@ -7,14 +8,14 @@ export default function AboutUs() {
         {/* Left Section */}
         <div className="relative">
           {/* Main Image */}
-          <img
+          <Image
             src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/elementor/thumbs/group-of-business-consultant-working-management-big-data-and-analyze-financial-document-of-company-qjn5vabyhv6ef6iaj2qowrdok2s79yzkt5th04wukg.jpg"
             alt="Main"
             className="h-[450px] w-4/5 object-cover"
           />
           {/* Overlay Small Image */}
           <div className="absolute right-2 bottom-[-80px] w-3/6 bg-white p-2 shadow-xl">
-            <img
+            <Image
               src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/elementor/thumbs/working-as-an-online-consultant-in-a-bank-in-the-business-clothes-of-an-office-employee--qjn5tgj7doij4cxp310qorgvzv5d8cvkanih83p16o.jpg"
               alt="Small"
               className="h-52 object-cover"
@@ -47,8 +48,8 @@ export default function AboutUs() {
 
           {/* Cita */}
           <div className="mt-8 border-l-4 border-amber-200 pl-4 text-gray-500 italic">
-            " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-            ullamcorper mattis, pulvinar dapibus leo. "
+            &apos; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+            nec ullamcorper mattis, pulvinar dapibus leo. &apos;
           </div>
 
           {/* Experiencia */}

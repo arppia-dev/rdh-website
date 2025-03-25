@@ -53,7 +53,7 @@ export default function Solutions() {
               Consulting Solutions
               <span className="ml-2 inline-block h-0.5 w-12 bg-amber-200"></span>
             </h6>
-            <h2 className="mt-2 text-4xl font-bold text-white">We've Got Your Business Covered</h2>
+            <h2 className="mt-2 text-4xl font-bold text-white">We ve Got Your Business Covered</h2>
           </div>
 
           {/* CTA Button */}

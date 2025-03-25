@@ -1,19 +1,19 @@
 import { faFacebookF, faPinterest, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import configPromise from '@payload-config'
-import { getPayload } from 'payload'
+// import configPromise from '@payload-config'
+// import { getPayload } from 'payload'
 
 export default async function SocialMedia() {
-  const payload = await getPayload({ config: configPromise })
+  // const payload = await getPayload({ config: configPromise })
 
-  const socialMedias = await payload.find({
+  /*const socialMedias = await payload.find({
     collection: 'social-media',
     overrideAccess: false,
     select: {
       name: true,
       link: true,
     },
-  })
+  })*/
 
   return (
     <div className="flex items-center gap-5">

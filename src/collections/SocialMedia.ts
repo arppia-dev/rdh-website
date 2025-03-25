@@ -1,4 +1,3 @@
-import { link } from '@/payload/fields/link'
 import type { CollectionConfig } from 'payload'
 
 export const SocialMedia: CollectionConfig = {
@@ -16,8 +15,8 @@ export const SocialMedia: CollectionConfig = {
       type: 'text',
       required: true,
     },
-    link({
+    /*link({
       appearances: false,
-    }),
+    }),*/
   ],
 }

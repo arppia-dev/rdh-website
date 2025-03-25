@@ -1,4 +1,5 @@
-import { ArrowRight, Play, PlayCircle } from 'lucide-react'
+import { ArrowRight, Play } from 'lucide-react'
+import Image from 'next/image'
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -56,7 +57,7 @@ export default function CaseStudies() {
           {caseStudies.map((study, index) => (
             <div key={index} className="flex flex-col items-center overflow-hidden">
               <div className="relative w-full">
-                <img src={study.image} alt={study.title} className="h-56 w-full object-cover" />
+                <Image src={study.image} alt={study.title} className="h-56 w-full object-cover" />
                 <div className="absolute top-0 left-0">
                   <div className="flex h-12 w-12 items-center justify-center bg-amber-200">
                     <Play className="h-6 w-6 text-sky-950" />

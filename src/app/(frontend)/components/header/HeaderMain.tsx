@@ -1,4 +1,3 @@
-import { ChevronDown } from 'lucide-react'
 import Logo from '../common/Logo'
 import Navbar from '../common/Navbar'
 

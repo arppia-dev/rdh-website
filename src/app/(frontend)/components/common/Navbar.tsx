@@ -1,5 +1,3 @@
-import { ChevronDown } from 'lucide-react'
-
 export default function Navbar() {
   return (
     <nav className="hidden items-center gap-8 md:flex">

@@ -1,4 +1,5 @@
-import { BarChart3, Clock, Gem, LineChart, PlayCircle, Rocket, Trophy } from 'lucide-react'
+import { BarChart3, Clock, Gem, PlayCircle } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Methodology() {
   return (
@@ -6,7 +7,7 @@ export default function Methodology() {
       <div className="container mx-auto px-4 py-16">
         {/* Left side with image and play button */}
         <div className="relative mb-20 h-100">
-          <img
+          <Image
             src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/2023/09/business-sales-consultant-discussing-in-data-documents-at-modern-office-.jpg"
             alt="Methodology"
             className="h-100 w-full"
