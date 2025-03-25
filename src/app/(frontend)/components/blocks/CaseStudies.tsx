@@ -49,7 +49,7 @@ export default function CaseStudies() {
         </h5>
         <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
           Explore In-Depth Case Studies <br /> Highlighting The Tangible <br /> Results Our
-          Consulting Servicess
+          Consulting Services
         </h2>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
