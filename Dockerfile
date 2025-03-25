@@ -11,11 +11,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json* ./
-RUN \
-  if [ -f package-lock.json ]; then npm ci; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
-
+RUN npm ci
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -28,10 +24,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN \
-  if [ -f package-lock.json ]; then npm run build; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
