@@ -21,7 +21,7 @@ export default function AboutUs() {
             <Image
               src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/elementor/thumbs/working-as-an-online-consultant-in-a-bank-in-the-business-clothes-of-an-office-employee--qjn5tgj7doij4cxp310qorgvzv5d8cvkanih83p16o.jpg"
               alt="Small"
-              className="h-52 object-cover"
+              className="h-80 w-full object-cover"
               width={0}
               height={0}
               sizes="100vw"
@@ -33,7 +33,7 @@ export default function AboutUs() {
               100<span className="text-xl">+</span>
             </p>
             <p className="mt-4 text-sm tracking-wide uppercase">
-              negocios confian <br /> en nosotros
+              empresas y clientes confian <br /> en nosotros
             </p>
           </div>
         </div>
@@ -44,18 +44,20 @@ export default function AboutUs() {
             Sobre Nosotros
             <span className="h-0.5 w-12 bg-amber-200"></span>
           </h6>
-          <h2 className="mt-3 text-4xl leading-snug font-bold text-gray-900">
-            We Are Business Consultants Dedicated To Driving Your Success
+          <h2 className="mt-3 text-4xl leading-snug font-bold text-gray-900 capitalize">
+            Somos una Firma de Abogados Dedicada a Proteger Tus Intereses
           </h2>
           <p className="mt-6 leading-relaxed text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-            ullamcorper mattis, pulvinar dapibus leo.
+            En nuestra firma, nos especializamos en ofrecer soluciones legales estratégicas y
+            personalizadas para cada cliente. Con un equipo de abogados expertos en diversas áreas
+            del derecho, nos comprometemos a proporcionar un servicio profesional, ético y
+            eficiente.
           </p>
 
           {/* Cita */}
           <div className="mt-8 border-l-4 border-amber-200 pl-4 text-gray-500 italic">
-            &apos; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-            nec ullamcorper mattis, pulvinar dapibus leo. &apos;
+            &apos; Nos destacamos por nuestra atención al detalle y nuestro enfoque orientado a
+            resultados. &apos;
           </div>
 
           {/* Experiencia */}
@@ -64,9 +66,10 @@ export default function AboutUs() {
               <CalendarDays className="h-6 w-6" />
             </div>
             <div>
-              <h4 className="text-lg font-bold">15 Years Of Experience</h4>
+              <h4 className="text-lg font-bold">Más de 15 Años de Experiencia</h4>
               <p className="text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Hemos trabajado con empresas y particulares, resolviendo casos complejos con éxito y
+                ofreciendo asesoría legal de alto nivel.
               </p>
             </div>
           </div>
