@@ -54,6 +54,7 @@ export type SupportedTimezones =
   | 'Asia/Singapore'
   | 'Asia/Tokyo'
   | 'Asia/Seoul'
+  | 'Australia/Brisbane'
   | 'Australia/Sydney'
   | 'Pacific/Guam'
   | 'Pacific/Noumea'
@@ -68,7 +69,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
-    'social-media': SocialMedia;
+    pages: Page;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -77,7 +78,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
-    'social-media': SocialMediaSelect<false> | SocialMediaSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -153,23 +154,65 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "social-media".
+ * via the `definition` "pages".
  */
-export interface SocialMedia {
+export interface Page {
   id: string;
-  name: string;
-  link: {
-    type?: ('reference' | 'custom') | null;
-    newTab?: boolean | null;
-    reference?: {
-      relationTo: 'social-media';
-      value: string | SocialMedia;
-    } | null;
-    url?: string | null;
-    label: string;
-  };
+  title: string;
+  slug: string;
+  layout?: (HeroBlock | ContentBlock)[] | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeroBlock".
+ */
+export interface HeroBlock {
+  title: string;
+  image?: (string | null) | Media;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'hero';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContentBlock".
+ */
+export interface ContentBlock {
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'content';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -187,8 +230,8 @@ export interface PayloadLockedDocument {
         value: string | Media;
       } | null)
     | ({
-        relationTo: 'social-media';
-        value: string | SocialMedia;
+        relationTo: 'pages';
+        value: string | Page;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -268,21 +311,39 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "social-media_select".
+ * via the `definition` "pages_select".
  */
-export interface SocialMediaSelect<T extends boolean = true> {
-  name?: T;
-  link?:
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  layout?:
     | T
     | {
-        type?: T;
-        newTab?: T;
-        reference?: T;
-        url?: T;
-        label?: T;
+        hero?: T | HeroBlockSelect<T>;
+        content?: T | ContentBlockSelect<T>;
       };
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HeroBlock_select".
+ */
+export interface HeroBlockSelect<T extends boolean = true> {
+  title?: T;
+  image?: T;
+  content?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContentBlock_select".
+ */
+export interface ContentBlockSelect<T extends boolean = true> {
+  content?: T;
+  id?: T;
+  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
