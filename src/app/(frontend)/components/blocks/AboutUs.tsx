@@ -12,6 +12,9 @@ export default function AboutUs() {
             src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/elementor/thumbs/group-of-business-consultant-working-management-big-data-and-analyze-financial-document-of-company-qjn5vabyhv6ef6iaj2qowrdok2s79yzkt5th04wukg.jpg"
             alt="Main"
             className="h-[450px] w-4/5 object-cover"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
           {/* Overlay Small Image */}
           <div className="absolute right-2 bottom-[-80px] w-3/6 bg-white p-2 shadow-xl">
@@ -19,6 +22,9 @@ export default function AboutUs() {
               src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/elementor/thumbs/working-as-an-online-consultant-in-a-bank-in-the-business-clothes-of-an-office-employee--qjn5tgj7doij4cxp310qorgvzv5d8cvkanih83p16o.jpg"
               alt="Small"
               className="h-52 object-cover"
+              width={0}
+              height={0}
+              sizes="100vw"
             />
           </div>
           {/* Stats Card */}

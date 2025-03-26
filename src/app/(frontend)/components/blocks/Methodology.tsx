@@ -11,6 +11,9 @@ export default function Methodology() {
             src="https://elkit.wirastudio.co/consult/wp-content/uploads/sites/40/2023/09/business-sales-consultant-discussing-in-data-documents-at-modern-office-.jpg"
             alt="Methodology"
             className="h-100 w-full"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <button className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg">
