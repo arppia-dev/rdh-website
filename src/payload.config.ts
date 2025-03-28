@@ -10,6 +10,7 @@ import sharp from 'sharp'
 import { Users } from './payload/collections/Users'
 import { Media } from './payload/collections/Media'
 import { Pages } from './payload/collections/Pages'
+import { Nav } from './payload/globals/Nav'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -22,6 +23,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Pages],
+  globals: [Nav],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

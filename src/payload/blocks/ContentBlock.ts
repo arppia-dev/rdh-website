@@ -6,7 +6,7 @@ import {
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 
-export const Content: Block = {
+export const ContentBlock: Block = {
   slug: 'content',
   fields: [
     {
