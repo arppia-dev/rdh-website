@@ -3,7 +3,9 @@ import { RichText } from '@payloadcms/richtext-lexical/react'
 import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
 
-export default async function Page({ params }: { params: { slug: string } }) {
+type PageProps = Promise<{ slug: string }>
+
+export default async function Page({ params }: { params: PageProps }) {
   const { slug } = await params
   const payload = await getPayload({ config: configPromise })
 
