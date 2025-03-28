@@ -1,4 +1,4 @@
-import { Nav, Page } from '@/payload-types'
+import { Page } from '@/payload-types'
 import configPromise from '@payload-config'
 import Link from 'next/link'
 import { getPayload } from 'payload'
