@@ -1,29 +1,50 @@
 import { ContentBlock, HeroBlock } from '@/payload-types'
 import configPromise from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
-import { notFound } from 'next/navigation'
-import { getPayload } from 'payload'
+import { draftMode } from 'next/headers'
+import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
+import { cache } from 'react'
 
-type PageProps = Promise<{ slug: string }>
 type Block = HeroBlock | ContentBlock
+type PageProps = {
+  params: Promise<{
+    slug?: string
+  }>
+}
 
-export default async function Page({ params }: { params: PageProps }) {
-  const { slug } = await params
+export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
-
-  const { docs } = await payload.find({
+  const pages = await payload.find({
     collection: 'pages',
-    where: {
-      slug: {
-        equals: `/${slug}`,
-      },
+    draft: false,
+    limit: 1000,
+    overrideAccess: false,
+    pagination: false,
+    select: {
+      slug: true,
     },
   })
 
-  const page = docs?.[0]
+  const params = pages.docs
+    ?.filter((doc) => {
+      return doc.slug !== 'home'
+    })
+    .map(({ slug }) => {
+      return { slug }
+    })
+
+  return params
+}
+
+export default async function Page({ params: paramsPromise }: PageProps) {
+  const { slug = 'home' } = await paramsPromise
+
+  const page: RequiredDataFromCollectionSlug<'pages'> | null = await queryPageBySlug({
+    slug,
+  })
 
   if (!page) {
-    notFound()
+    return <>Not found</>
   }
 
   return (
@@ -80,3 +101,24 @@ export default async function Page({ params }: { params: PageProps }) {
     </div>
   )
 }
+
+const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
+  const { isEnabled: draft } = await draftMode()
+
+  const payload = await getPayload({ config: configPromise })
+
+  const result = await payload.find({
+    collection: 'pages',
+    draft,
+    limit: 1,
+    pagination: false,
+    overrideAccess: draft,
+    where: {
+      slug: {
+        equals: slug,
+      },
+    },
+  })
+
+  return result.docs?.[0] || null
+})

@@ -39,7 +39,7 @@ export const Pages: CollectionConfig = {
       ({ data, operation }) => {
         if (operation === 'create' || operation === 'update') {
           if (data.title) {
-            data.slug = data.title === 'Inicio' ? '/' : generateSlug(data.title)
+            data.slug = data.title === 'Inicio' ? 'home' : generateSlug(data.title)
           }
         }
         return data
