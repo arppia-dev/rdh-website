@@ -9,7 +9,7 @@ export function HeroBlock(block: Hero): JSX.Element | undefined {
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
           backgroundImage:
-            typeof block.image === 'object' && block.image?.url
+            block.image && typeof block.image !== 'string'
               ? `url("${block.image.url}")`
               : undefined,
         }}
