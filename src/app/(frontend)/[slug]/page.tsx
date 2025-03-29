@@ -1,9 +1,11 @@
+import { ContentBlock, HeroBlock } from '@/payload-types'
 import configPromise from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
 
 type PageProps = Promise<{ slug: string }>
+type Block = HeroBlock | ContentBlock
 
 export default async function Page({ params }: { params: PageProps }) {
   const { slug } = await params
@@ -26,7 +28,7 @@ export default async function Page({ params }: { params: PageProps }) {
 
   return (
     <div>
-      {page.layout!.map((block: any, index: number) => {
+      {page.layout!.map((block: Block, index: number) => {
         switch (block.blockType) {
           case 'hero':
             return (
@@ -37,7 +39,10 @@ export default async function Page({ params }: { params: PageProps }) {
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-20"
                   style={{
-                    backgroundImage: `url("${block.image.url}")`,
+                    backgroundImage:
+                      typeof block.image === 'object' && block.image?.url
+                        ? `url("${block.image.url}")`
+                        : undefined,
                   }}
                 />
                 <div className="z-10">
