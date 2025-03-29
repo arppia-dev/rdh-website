@@ -164,15 +164,15 @@ export interface Page {
   id: string;
   title: string;
   slug: string;
-  layout?: (HeroBlock | ContentBlock)[] | null;
+  layout?: (Hero | Content)[] | null;
   updatedAt: string;
   createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "HeroBlock".
+ * via the `definition` "Hero".
  */
-export interface HeroBlock {
+export interface Hero {
   title: string;
   image?: (string | null) | Media;
   content: {
@@ -196,9 +196,9 @@ export interface HeroBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "ContentBlock".
+ * via the `definition` "Content".
  */
-export interface ContentBlock {
+export interface Content {
   content: {
     root: {
       type: string;
@@ -323,17 +323,17 @@ export interface PagesSelect<T extends boolean = true> {
   layout?:
     | T
     | {
-        hero?: T | HeroBlockSelect<T>;
-        content?: T | ContentBlockSelect<T>;
+        hero?: T | HeroSelect<T>;
+        content?: T | ContentSelect<T>;
       };
   updatedAt?: T;
   createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "HeroBlock_select".
+ * via the `definition` "Hero_select".
  */
-export interface HeroBlockSelect<T extends boolean = true> {
+export interface HeroSelect<T extends boolean = true> {
   title?: T;
   image?: T;
   content?: T;
@@ -342,9 +342,9 @@ export interface HeroBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "ContentBlock_select".
+ * via the `definition` "Content_select".
  */
-export interface ContentBlockSelect<T extends boolean = true> {
+export interface ContentSelect<T extends boolean = true> {
   content?: T;
   id?: T;
   blockName?: T;

@@ -1,7 +1,8 @@
 import type { CollectionConfig } from 'payload'
-import { ContentBlock } from '../blocks/ContentBlock'
-import { HeroBlock } from '../blocks/HeroBlock'
+
 import { generateSlug } from '../utils/generateSlug'
+import { Hero } from '../blocks/Hero/config'
+import { Content } from '../blocks/Content/config'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -31,7 +32,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [HeroBlock, ContentBlock],
+      blocks: [Hero, Content],
     },
   ],
   hooks: {

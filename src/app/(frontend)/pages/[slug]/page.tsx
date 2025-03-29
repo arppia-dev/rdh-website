@@ -1,11 +1,11 @@
-import { ContentBlock, HeroBlock } from '@/payload-types'
+import { Content, Hero } from '@/payload-types'
 import configPromise from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import { draftMode } from 'next/headers'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { cache } from 'react'
 
-type Block = HeroBlock | ContentBlock
+type Block = Hero | Content
 type PageProps = {
   params: Promise<{
     slug?: string
