@@ -6,8 +6,7 @@ import { getPayload } from 'payload'
 type Global = keyof Config['globals']
 
 async function getGlobal(slug: Global, depth = 0) {
-  const config = await configPromise
-  const payload = await getPayload({ config })
+  const payload = await getPayload({ config: configPromise })
 
   const global = await payload.findGlobal({
     slug,
