@@ -1,8 +1,8 @@
-/*import { RenderBlocks } from '@/payload/blocks/RenderBlocks'
+import { RenderBlocks } from '@/payload/blocks/RenderBlocks'
 import configPromise from '@payload-config'
 import { draftMode } from 'next/headers'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
-import { cache } from 'react'*/
+import { cache } from 'react'
 
 type PageProps = {
   params: Promise<{
@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 }*/
 
 export default async function Page({ params: paramsPromise }: PageProps) {
-  /*const { slug = 'home' } = await paramsPromise
+  const { slug = 'home' } = await paramsPromise
 
   const page: RequiredDataFromCollectionSlug<'pages'> | null = await queryPageBySlug({
     slug,
@@ -46,12 +46,11 @@ export default async function Page({ params: paramsPromise }: PageProps) {
     return <>Not found</>
   }
 
-  return <RenderBlocks blocks={page.layout} />*/
+  /*return <RenderBlocks blocks={page.layout} />*/
 
   return <>Not found {JSON.stringify(paramsPromise, null, 2)}</>
 }
 
-/*
 const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
   const { isEnabled: draft } = await draftMode()
 
@@ -71,4 +70,4 @@ const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
   })
 
   return result.docs?.[0] || null
-})*/
+})
