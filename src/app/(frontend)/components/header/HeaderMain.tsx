@@ -9,7 +9,6 @@ export default function HeaderMain() {
         <Logo />
 
         {/* Nav Links */}
-        <Header />
 
         {/* Get a Quote Button */}
         <button className="z-10 bg-sky-800 px-6 py-4 font-semibold text-white hover:bg-amber-200 hover:text-sky-950">
