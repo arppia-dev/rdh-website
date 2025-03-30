@@ -5,7 +5,6 @@ import AboutUs from './components/blocks/AboutUs'
 import CaseStudies from './components/blocks/CaseStudies'
 import Methodology from './components/blocks/Methodology'
 import Solutions from './components/blocks/Solutions'
-import HeaderContact from './components/header/HeaderContact'
 import Hero from './components/home/Hero'
 import './globals.css'
 
