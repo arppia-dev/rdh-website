@@ -48,7 +48,7 @@ export default async function Page({ params: paramsPromise }: PageProps) {
 
   return <RenderBlocks blocks={page.layout} />*/
 
-  return <>Not found</>
+  return <>Not found {JSON.stringify(paramsPromise, null, 2)}</>
 }
 
 /*
