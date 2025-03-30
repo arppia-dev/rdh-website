@@ -21,6 +21,9 @@ export default async function HomePage() {
     <>
       <HeaderContact />
       <AboutUs />
+      <Solutions />
+      <Methodology />
+      <CaseStudies />
       {/* <HeaderContact />
       <Hero />
       <AboutUs />
