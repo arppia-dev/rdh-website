@@ -9,7 +9,7 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
 
   return (
     <nav className="flex items-center gap-3">
-      {/* {navItems.map((item: { page: string | Page; id?: string | null }) => (
+      {navItems.map((item: { page: string | Page; id?: string | null }) => (
         <div
           key={item.id}
           className="relative flex cursor-pointer items-center gap-1 hover:text-amber-200"
@@ -18,7 +18,7 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
             {typeof item.page !== 'string' ? item.page.title : item.page}
           </Link>
         </div>
-      ))} */}
+      ))}
     </nav>
   )
 }
