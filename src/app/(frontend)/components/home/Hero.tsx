@@ -14,7 +14,7 @@ export default function Hero() {
       ></div>
 
       {/* Navbar */}
-      <HeaderMain />
+      {/* <HeaderMain /> */}
 
       <div className="relative container mx-auto flex flex-col items-start px-4 py-32 lg:px-16">
         {/* Texto principal */}
