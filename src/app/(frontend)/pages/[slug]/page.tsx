@@ -46,9 +46,7 @@ export default async function Page({ params: paramsPromise }: PageProps) {
     return <>Not found</>
   }
 
-  /*return <RenderBlocks blocks={page.layout} />*/
-
-  return <>Not found {JSON.stringify(paramsPromise, null, 2)}</>
+  return <RenderBlocks blocks={page.layout} />
 }
 
 const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
