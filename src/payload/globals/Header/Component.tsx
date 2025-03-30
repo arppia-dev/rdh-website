@@ -1,4 +1,6 @@
+import { getCachedGlobal } from '@/payload/utils/getGlobals'
 import { HeaderClient } from './Component.client'
+import { type Header } from '@/payload-types'
 
 async function getHeaderData() {
   const res = await fetch(`${process.env.PAYLOAD_URL}/api/globals/header`, {
@@ -11,6 +13,7 @@ async function getHeaderData() {
 }
 
 export async function Header() {
-  const headerData = await getHeaderData()
+  const headerData: Header = await getCachedGlobal('header', 1)()
+  //const headerData = await getHeaderData()
   return <HeaderClient data={headerData} />
 }
