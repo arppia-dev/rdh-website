@@ -2,15 +2,17 @@
 import configPromise from '@payload-config'
 import Link from 'next/link'
 import { getPayload } from 'payload'*/
+import configPromise from '@payload-config'
+import { getPayload } from 'payload'
 
 export default async function Navbar() {
-  /*const payload = await getPayload({ config: configPromise })
+  const payload = await getPayload({ config: configPromise })
 
   const { items } = await payload.findGlobal({
     slug: 'nav',
-  })*/
+  })
 
-  return <h1>prueba</h1>
+  return <h1>prueba {JSON.stringify(items, null, 2)}</h1>
   /*
   return (
 
