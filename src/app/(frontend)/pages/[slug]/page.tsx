@@ -1,7 +1,6 @@
 import { Content, Hero } from '@/payload-types'
 import { RenderBlocks } from '@/payload/blocks/RenderBlocks'
 import configPromise from '@payload-config'
-import { RichText } from '@payloadcms/richtext-lexical/react'
 import { draftMode } from 'next/headers'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { cache } from 'react'

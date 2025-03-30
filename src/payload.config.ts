@@ -4,12 +4,13 @@ import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
-import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import { fileURLToPath } from 'url'
 
-import { Users } from './payload/collections/Users'
+import 'dotenv/config'
 import { Media } from './payload/collections/Media'
 import { Pages } from './payload/collections/Pages'
+import { Users } from './payload/collections/Users'
 import { Nav } from './payload/globals/Nav'
 
 const filename = fileURLToPath(import.meta.url)
