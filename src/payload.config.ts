@@ -7,11 +7,10 @@ import { buildConfig } from 'payload'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
-import 'dotenv/config'
 import { Media } from './payload/collections/Media'
 import { Pages } from './payload/collections/Pages'
 import { Users } from './payload/collections/Users'
-import { Nav } from './payload/globals/Nav'
+import { Header } from './payload/globals/Header/config'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -24,7 +23,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Pages],
-  globals: [Nav],
+  globals: [Header],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

@@ -87,10 +87,10 @@ export interface Config {
     defaultIDType: string;
   };
   globals: {
-    nav: Nav;
+    header: Header;
   };
   globalsSelect: {
-    nav: NavSelect<false> | NavSelect<true>;
+    header: HeaderSelect<false> | HeaderSelect<true>;
   };
   locale: null;
   user: User & {
@@ -383,11 +383,11 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "nav".
+ * via the `definition` "header".
  */
-export interface Nav {
+export interface Header {
   id: string;
-  items: {
+  navItems: {
     page: string | Page;
     id?: string | null;
   }[];
@@ -396,10 +396,10 @@ export interface Nav {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "nav_select".
+ * via the `definition` "header_select".
  */
-export interface NavSelect<T extends boolean = true> {
-  items?:
+export interface HeaderSelect<T extends boolean = true> {
+  navItems?:
     | T
     | {
         page?: T;

@@ -1,12 +1,13 @@
 import { GlobalConfig } from 'payload'
 
-export const Nav: GlobalConfig = {
-  slug: 'nav',
+export const Header: GlobalConfig = {
+  slug: 'header',
   fields: [
     {
-      name: 'items',
+      name: 'navItems',
       type: 'array',
       required: true,
+      minRows: 1,
       maxRows: 8,
       fields: [
         {

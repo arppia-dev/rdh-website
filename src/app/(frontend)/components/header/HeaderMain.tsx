@@ -1,5 +1,5 @@
+import { Header } from '@/payload/globals/Header/Component'
 import Logo from '../common/Logo'
-import Navbar from '../common/Navbar'
 
 export default function HeaderMain() {
   return (
@@ -9,7 +9,7 @@ export default function HeaderMain() {
         <Logo />
 
         {/* Nav Links */}
-        <Navbar />
+        <Header />
 
         {/* Get a Quote Button */}
         <button className="z-10 bg-sky-800 px-6 py-4 font-semibold text-white hover:bg-amber-200 hover:text-sky-950">
