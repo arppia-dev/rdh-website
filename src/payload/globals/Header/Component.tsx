@@ -1,18 +1,16 @@
-'use client'
-
-import useSWR from 'swr'
 import { HeaderClient } from './Component.client'
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json())
+async function getHeaderData() {
+  const res = await fetch(`${process.env.PAYLOAD_URL}/api/globals/header`, {
+    cache: 'no-store',
+  })
 
-export function Header() {
-  const { data: headerData, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_PAYLOAD_URL}/api/globals/header`,
-    fetcher,
-  )
+  if (!res.ok) throw new Error('Failed to fetch header data')
 
-  if (error) return <div>Error loading header</div>
-  if (!headerData) return <div>Loading...</div>
+  return res.json()
+}
 
+export async function Header() {
+  const headerData = await getHeaderData()
   return <HeaderClient data={headerData} />
 }
