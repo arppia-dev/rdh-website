@@ -10,7 +10,6 @@ type PageProps = {
   }>
 }
 
-/*
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
   const pages = await payload.find({
@@ -33,7 +32,7 @@ export async function generateStaticParams() {
     })
 
   return params
-}*/
+}
 
 export default async function Page({ params: paramsPromise }: PageProps) {
   const { slug = 'home' } = await paramsPromise
