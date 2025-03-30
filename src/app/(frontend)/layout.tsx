@@ -1,6 +1,6 @@
+import { Header } from '@/payload/globals/Header/Component'
 import React from 'react'
 import './globals.css'
-import { Header } from '@/payload/globals/Header/Component'
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
@@ -14,8 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header />
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
