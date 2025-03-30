@@ -20,11 +20,12 @@ export default async function HomePage() {
   return (
     <>
       <HeaderContact />
+      {/* <HeaderContact />
       <Hero />
       <AboutUs />
       <Solutions />
       <Methodology />
-      <CaseStudies />
+      <CaseStudies /> */}
     </>
   )
 }
