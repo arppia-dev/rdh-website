@@ -1,11 +1,10 @@
-import { Content, Hero } from '@/payload-types'
 import { RenderBlocks } from '@/payload/blocks/RenderBlocks'
 import configPromise from '@payload-config'
 import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { cache } from 'react'
 
-type Block = Hero | Content
 type PageProps = {
   params: Promise<{
     slug?: string
@@ -44,7 +43,7 @@ export default async function Page({ params: paramsPromise }: PageProps) {
   })
 
   if (!page) {
-    return <>Not found</>
+    return notFound()
   }
 
   return <RenderBlocks blocks={page.layout} />
