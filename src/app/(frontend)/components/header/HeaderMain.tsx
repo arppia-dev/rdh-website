@@ -1,4 +1,3 @@
-import { Header } from '@/payload/globals/Header/Component'
 import Logo from '../common/Logo'
 
 export default function HeaderMain() {

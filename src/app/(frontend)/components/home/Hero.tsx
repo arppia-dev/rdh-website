@@ -1,5 +1,4 @@
 import { ArrowRight, Phone } from 'lucide-react'
-import HeaderMain from '../header/HeaderMain'
 
 export default function Hero() {
   return (

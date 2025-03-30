@@ -387,10 +387,12 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Header {
   id: string;
-  navItems: {
-    page: string | Page;
-    id?: string | null;
-  }[];
+  navItems?:
+    | {
+        page: string | Page;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
