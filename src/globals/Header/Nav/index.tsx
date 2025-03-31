@@ -14,8 +14,16 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
           key={item.id}
           className="relative flex cursor-pointer items-center gap-1 text-white hover:text-amber-200"
         >
-          <Link href={typeof item.page !== 'string' ? `/${item.page.slug}` : item.page}>
-            {typeof item.page !== 'string' ? item.page.title : item.page}
+          <Link
+            href={
+              typeof item.page !== 'string'
+                ? item.page.slug === 'home'
+                  ? '/'
+                  : `/${item.page.slug}`
+                : item.page
+            }
+          >
+            {typeof item.page !== 'string' ? item.page.title : undefined}
           </Link>
         </div>
       ))}
