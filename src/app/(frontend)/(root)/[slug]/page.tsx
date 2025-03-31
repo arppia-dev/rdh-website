@@ -1,5 +1,5 @@
-import { RenderBlocks } from '@/payload/blocks/RenderBlocks'
-import { queryPageBySlug } from '@/payload/utils/queryPageBySlug'
+import { RenderBlocks } from '@/blocks/RenderBlocks'
+import { queryPageBySlug } from '@/utils/queryPageBySlug'
 import { type RequiredDataFromCollectionSlug } from 'payload'
 
 type PageProps = {
