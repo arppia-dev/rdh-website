@@ -1,10 +1,12 @@
 import { Header } from '@/globals/Header/Component'
 import React from 'react'
+import Footer from '../components/Footer'
 import './globals.css'
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  description:
+    'Firma de abogados en Panamá, especializada en derecho corporativo, propiedad intelectual, litigios y arbitrajes.',
+  title: 'Ríos Dixon Herrera & Asociados',
 }
 
 export default function RootLayout({
@@ -17,6 +19,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

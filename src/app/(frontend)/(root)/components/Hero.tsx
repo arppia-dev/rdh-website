@@ -16,17 +16,18 @@ export default function Hero() {
         {/* Texto principal */}
         <div className="flex items-center gap-2">
           <span className="font-semibold tracking-wide text-white uppercase">
-            Unlock Your Business Potential
+            Protegemos tu empresa con soluciones legales estratégicas
           </span>
           <span className="h-0.5 w-20 bg-amber-200"></span>
         </div>
 
         <h1 className="mt-4 text-5xl leading-tight font-bold text-white">
-          Strategic Consulting <br /> To Elevate Your <br /> Business Heights
+          Asesoría experta en <br /> Derecho Corporativo, Laboral, Penal,
+          <br /> Tributario, Inmobiliario y Migratorio.
         </h1>
         <p className="mt-6 max-w-2xl text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-          ullamcorper mattis, pulvinar dapibus leo.
+          Brindamos apoyo legal a empresas, emprendedores e inversionistas para garantizar el éxito
+          y cumplimiento normativo.
         </p>
 
         {/* Botón y teléfono */}

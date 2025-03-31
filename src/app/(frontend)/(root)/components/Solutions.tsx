@@ -1,35 +1,40 @@
-import { ArrowRight, GraduationCap, Handshake, Lightbulb, LineChart, Search } from 'lucide-react'
+import { ArrowRight, Briefcase, Building2, FileText, Globe, Home, ShieldAlert } from 'lucide-react'
 
 const services = [
   {
-    title: 'Strategic Planning',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    icon: <Lightbulb className="text-amber-300" size={40} />,
+    title: 'Derecho Corporativo',
+    description:
+      'Asesoría en constitución de empresas, fusiones, adquisiciones y contratos comerciales.',
+    icon: <Building2 className="text-amber-300" size={40} />,
   },
   {
-    title: 'Process Optimization',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    icon: <Handshake className="text-amber-300" size={40} />,
+    title: 'Derecho Laboral',
+    description:
+      'Redacción de contratos laborales, asesoría en despidos y resolución de conflictos laborales.',
+    icon: <Briefcase className="text-amber-300" size={40} />,
   },
   {
-    title: 'Market Research',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    icon: <Search className="text-amber-300" size={40} />,
+    title: 'Derecho Penal',
+    description:
+      'Defensa penal empresarial, cumplimiento normativo y representación en investigaciones legales.',
+    icon: <ShieldAlert className="text-amber-300" size={40} />,
   },
   {
-    title: 'Business Analysis',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    icon: <LineChart className="text-amber-300" size={40} />,
+    title: 'Derecho Tributario',
+    description:
+      'Asesoría fiscal, planeación tributaria, litigios fiscales y representación ante la ANIP.',
+    icon: <FileText className="text-amber-300" size={40} />,
   },
   {
-    title: 'Change Management',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    icon: <GraduationCap className="text-amber-300" size={40} />,
+    title: 'Derecho Inmobiliario',
+    description:
+      'Asesoría en compraventa de bienes raíces, contratos de arrendamiento y fideicomisos inmobiliarios.',
+    icon: <Home className="text-amber-300" size={40} />,
   },
   {
-    title: 'Development & Training',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    icon: <GraduationCap className="text-amber-300" size={40} />,
+    title: 'Derecho Migratorio',
+    description: 'Visas, permisos de trabajo y representación legal en trámites migratorios.',
+    icon: <Globe className="text-amber-300" size={40} />,
   },
 ]
 
@@ -50,10 +55,15 @@ export default function Solutions() {
           {/* Header */}
           <div>
             <h6 className="text-sm font-semibold tracking-wider text-white uppercase">
-              Consulting Solutions
+              Nuestros Servicios Legales
               <span className="ml-2 inline-block h-0.5 w-12 bg-amber-200"></span>
             </h6>
-            <h2 className="mt-2 text-4xl font-bold text-white">We ve Got Your Business Covered</h2>
+            <h2 className="mt-2 text-4xl font-bold text-white">
+              Asesoría jurídica especializada para <br />
+              proteger tu empresa y patrimonio.
+              <br /> Desde derecho corporativo hasta litigios, <br />
+              nuestro equipo te ofrece soluciones legales a la medida.
+            </h2>
           </div>
 
           {/* CTA Button */}

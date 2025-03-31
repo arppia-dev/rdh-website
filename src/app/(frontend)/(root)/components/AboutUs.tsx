@@ -56,8 +56,8 @@ export default function AboutUs() {
 
           {/* Cita */}
           <div className="mt-8 border-l-4 border-amber-200 pl-4 text-gray-500 italic">
-            &apos; Nos destacamos por nuestra atención al detalle y nuestro enfoque orientado a
-            resultados. &apos;
+            &apos;&apos; Nos destacamos por nuestra atención al detalle y nuestro enfoque orientado
+            a resultados. &apos;&apos;
           </div>
 
           {/* Experiencia */}
