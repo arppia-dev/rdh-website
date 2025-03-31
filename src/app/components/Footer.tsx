@@ -107,7 +107,9 @@ const Footer = async () => {
         {/* Dirección y horarios */}
         <div>
           <h3 className="mb-3 font-bold">Dirección</h3>
-          <p className="text-sm">Lumbung Hidup St 425 East Java Madiun City Block ABC 123</p>
+          <p className="text-sm">
+            The Century Tower, Vía Ricardo J. Alfaro, Ciudad de Panamá, Piso 10, Oficina 1007
+          </p>
           <h3 className="mt-4 font-bold">Horario</h3>
           <p className="text-sm">Lunes - Viernes 08 AM - 10 PM</p>
         </div>
