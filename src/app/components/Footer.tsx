@@ -63,10 +63,10 @@ const Footer = async () => {
         <div>
           <Logo />
           <p className="mt-2 text-sm italic">
-            "En RDH & Asociados, ofrecemos soluciones legales estratégicas para empresas y
+            En RDH & Asociados, ofrecemos soluciones legales estratégicas para empresas y
             particulares. Con un equipo de expertos en diversas áreas del derecho, garantizamos
             asesoría integral y representación confiable. Contáctanos para recibir el respaldo legal
-            que tu negocio necesita."
+            que tu negocio necesita.
           </p>
         </div>
 
