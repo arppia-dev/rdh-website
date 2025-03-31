@@ -1,4 +1,4 @@
-import { Header } from '@/payload/globals/Header/Component'
+import { Header } from '@/globals/Header/Component'
 import React from 'react'
 import './globals.css'
 

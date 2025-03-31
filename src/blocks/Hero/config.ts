@@ -6,22 +6,34 @@ import {
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 
-const columnFields: Field[] = [
+const fields: Field[] = [
+  {
+    name: 'title',
+    label: 'Title',
+    type: 'text',
+    required: true,
+  },
+  {
+    name: 'image',
+    label: 'Image',
+    type: 'upload',
+    relationTo: 'media',
+  },
   {
     name: 'content',
     type: 'richText',
+    label: false,
+    required: true,
     editor: lexicalEditor({
       features: ({ rootFeatures }) => {
         return [...rootFeatures, FixedToolbarFeature(), InlineToolbarFeature()]
       },
     }),
-    label: false,
-    required: true,
   },
 ]
 
-export const Content: Block = {
-  slug: 'content',
-  interfaceName: 'Content',
-  fields: columnFields,
+export const Hero: Block = {
+  slug: 'hero',
+  interfaceName: 'Hero',
+  fields,
 }

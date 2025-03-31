@@ -33,6 +33,7 @@ export const RenderBlocks: React.FC<{
               )
             }
           }
+
           return null
         })}
       </Fragment>

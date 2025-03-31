@@ -12,9 +12,9 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
       {navItems.map((item: { page: string | Page; id?: string | null }) => (
         <div
           key={item.id}
-          className="relative flex cursor-pointer items-center gap-1 hover:text-amber-200"
+          className="relative flex cursor-pointer items-center gap-1 text-white hover:text-amber-200"
         >
-          <Link href={typeof item.page !== 'string' ? `/pages/${item.page.slug}` : item.page}>
+          <Link href={typeof item.page !== 'string' ? `/${item.page.slug}` : item.page}>
             {typeof item.page !== 'string' ? item.page.title : item.page}
           </Link>
         </div>

@@ -1,5 +1,7 @@
+'use client'
+
 import { Mail, Phone } from 'lucide-react'
-import SocialMedia from '../common/SocialMedia'
+import SocialMedia from './SocialMedia'
 
 export default function HeaderContact() {
   return (
