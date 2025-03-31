@@ -51,7 +51,7 @@ export default function Solutions() {
       ></div>
 
       <div className="relative z-10 container mx-auto px-6 lg:px-16">
-        <div className="mb-12 flex items-center justify-between">
+        <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row md:gap-0">
           {/* Header */}
           <div>
             <h6 className="text-sm font-semibold tracking-wider text-white uppercase">

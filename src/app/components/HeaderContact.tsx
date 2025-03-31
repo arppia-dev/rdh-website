@@ -6,7 +6,7 @@ import SocialMedia from './SocialMedia'
 export default function HeaderContact() {
   return (
     <div className="text-md border-b-4 border-amber-200 bg-sky-950 py-4 text-white">
-      <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
+      <div className="container mx-auto flex flex-col flex-wrap items-center justify-center px-4 md:flex-row md:justify-between">
         {/* Contact Info */}
         <div className="flex flex-wrap items-center gap-4">
           <span className="flex items-center gap-1">

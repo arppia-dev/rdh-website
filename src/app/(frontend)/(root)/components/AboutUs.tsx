@@ -39,7 +39,7 @@ export default function AboutUs() {
         </div>
 
         {/* Right Section */}
-        <div>
+        <div className="pt-20 md:pt-0">
           <h6 className="flex items-center gap-2 text-sm font-semibold tracking-wider text-sky-800 uppercase">
             Sobre Nosotros
             <span className="h-0.5 w-12 bg-amber-200"></span>

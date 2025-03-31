@@ -15,13 +15,13 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   return (
     <header className="bg-sky-950">
       <HeaderContact />
-      <div className="container mx-auto flex items-center justify-between py-2">
+      <div className="container mx-auto flex items-center justify-between px-4 py-2">
         <Link href="/">
           <Logo />
         </Link>
         <div className="flex items-center gap-4">
           <HeaderNav data={data} />
-          <button className="z-10 bg-sky-800 px-6 py-4 font-semibold text-white hover:bg-amber-200 hover:text-sky-950">
+          <button className="z-10 hidden bg-sky-800 px-6 py-4 font-semibold text-white hover:bg-amber-200 hover:text-sky-950 md:block">
             Obten una cita
           </button>
         </div>
